@@ -1,4 +1,22 @@
-
+<%= form_tag '/stocks' do %>
+	<div id="form_div">
+		<div class="inner_div">
+			<%= label_tag "Stock Symbol"%>
+			<%= text_field_tag :stock_symbol %>
+		</div>
+		<div class="inner_div">
+			<%= label_tag "Option Volume Greater Than" %>
+			<%= text_field_tag :lower_limit %>
+		</div>
+		<div class="inner_div">
+			<%= label_tag "Option Volume Less Than" %>
+			<%= text_field_tag :upper_limit %>
+		</div>
+	</div>
+	<div>  
+		<%= submit_tag "Search Options" %>
+	</div>
+<% end %>
 
 <table class="blue">
   <thead>
@@ -16,23 +34,17 @@
   <tbody >
   <div class="table-stuff">
     <tr>
-      <td><%= @stock.symbol %></td>
-	  <td><%= @stock.last_trade_price_only %></td>
-	  <td><%= @stock.bid %></td>
-	  <td><%= @stock.ask %></td>
-	  <td><%= number_with_delimiter(@stock.volume.round(0)) %></td>
+      <td><%= @stock_info['quotes']['quote']['symbol'] %></td>
+	  <td><%= @stock_info['quotes']['quote']['last'] %></td>
+	  <td><%= @stock_info['quotes']['quote']['bid'] %></td>
+	  <td><%= @stock_info['quotes']['quote']['ask'] %></td>
+	  <td><%= number_with_delimiter(@stock_info['quotes']['quote']['volume'].round(0)) %></td>
 	  <td></td>
-	  <td><%=  sprintf "%.2f", (@stock.ask - @stock.bid) %></td>		    
+	  <td><%=  sprintf "%.2f", (@stock_info['quotes']['quote']['ask'] - @stock_info['quotes']['quote']['bid']) %></td>	    
     </tr>
-    <tr>
-      <td><%= @quote["symbol"] %></td>
-	  <td><%= sprintf "%.2f", @quote["last"] %></td>
-	  <td><%= sprintf "%.2f", @quote["bid"] %></td>
-	  <td><%= sprintf "%.2f", @quote["ask"] %></td>
-	  <td><%= number_with_delimiter(@quote["volume"]) %></td>
-	  <td><%= number_with_delimiter(@quote["open_interest"]) %></td>
-	  <td><%= sprintf "%.2f", (@quote["ask"] - @quote["bid"]) %></td>
-    </tr>
+   
+	
+
     <tr>
       <td>Non</td>
       <td>Mais</td>
