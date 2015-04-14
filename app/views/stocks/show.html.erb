@@ -1,0 +1,213 @@
+
+
+<table class="blue">
+  <thead>
+    <tr>
+      <th>Stock Symbol</th>
+      <th>Last</th>
+      <th>Bid</th>
+      <th>Ask</th>
+      <th>Volume</th>
+      <th>Open Interest</th>
+      <th>Bid/Ask Difference</th>
+    </tr>
+  </thead>
+ 
+  <tbody >
+  <div class="table-stuff">
+    <tr>
+      <td><%= @stock.symbol %></td>
+	  <td><%= @stock.last_trade_price_only %></td>
+	  <td><%= @stock.bid %></td>
+	  <td><%= @stock.ask %></td>
+	  <td><%= number_with_delimiter(@stock.volume.round(0)) %></td>
+	  <td></td>
+	  <td><%=  sprintf "%.2f", (@stock.ask - @stock.bid) %></td>		    
+    </tr>
+    <tr>
+      <td><%= @quote["symbol"] %></td>
+	  <td><%= sprintf "%.2f", @quote["last"] %></td>
+	  <td><%= sprintf "%.2f", @quote["bid"] %></td>
+	  <td><%= sprintf "%.2f", @quote["ask"] %></td>
+	  <td><%= number_with_delimiter(@quote["volume"]) %></td>
+	  <td><%= number_with_delimiter(@quote["open_interest"]) %></td>
+	  <td><%= sprintf "%.2f", (@quote["ask"] - @quote["bid"]) %></td>
+    </tr>
+    <tr>
+      <td>Non</td>
+      <td>Mais</td>
+      <td>Allo !</td>
+    </tr>
+    <tr>
+      <td>Non</td>
+      <td>Mais</td>
+      <td>Allo !</td>
+    </tr>
+    <tr>
+      <td>Non</td>
+      <td>Mais</td>
+      <td>Allo !</td>
+    </tr>
+    <tr>
+      <td>Non</td>
+      <td>Mais</td>
+      <td>Allo !</td>
+    </tr>
+    <tr>
+      <td>Non</td>
+      <td>Mais</td>
+      <td>Allo !</td>
+    </tr>
+    <tr>
+      <td>Non</td>
+      <td>Mais</td>
+      <td>Allo !</td>
+    </tr>
+    <tr>
+      <td>Non</td>
+      <td>Mais</td>
+      <td>Allo !</td>
+    </tr>
+    <tr>
+      <td>Non</td>
+      <td>Mais</td>
+      <td>Allo !</td>
+    </tr>
+       <tr>
+      <td>Non</td>
+      <td>Mais</td>
+      <td>Allo !</td>
+    </tr>
+    <tr>
+      <td>Non</td>
+      <td>Mais</td>
+      <td>Allo !</td>
+    </tr>
+    <tr>
+      <td>Non</td>
+      <td>Mais</td>
+      <td>Allo !</td>
+    </tr>
+    <tr>
+      <td>Non</td>
+      <td>Mais</td>
+      <td>Allo !</td>
+    </tr>
+    <tr>
+      <td>Non</td>
+      <td>Mais</td>
+      <td>Allo !</td>
+    </tr>
+    <tr>
+      <td>Non</td>
+      <td>Mais</td>
+      <td>Allo !</td>
+    </tr>
+    <tr>
+      <td>Non</td>
+      <td>Mais</td>
+      <td>Allo !</td>
+    </tr>
+    <tr>
+      <td>Non</td>
+      <td>Mais</td>
+      <td>Allo !</td>
+    </tr>
+    <tr>
+      <td>Non</td>
+      <td>Mais</td>
+      <td>Allo !</td>
+    </tr>
+    <tr>
+      <td>Non</td>
+      <td>Mais</td>
+      <td>Allo !</td>
+    </tr>
+        <tr>
+      <td>Non</td>
+      <td>Mais</td>
+      <td>Allo !</td>
+    </tr>
+    <tr>
+      <td>Non</td>
+      <td>Mais</td>
+      <td>Allo !</td>
+    </tr>
+    <tr>
+      <td>Non</td>
+      <td>Mais</td>
+      <td>Allo !</td>
+    </tr>
+    <tr>
+      <td>Non</td>
+      <td>Mais</td>
+      <td>Allo !</td>
+    </tr>
+    <tr>
+      <td>Non</td>
+      <td>Mais</td>
+      <td>Allo !</td>
+    </tr>
+    <tr>
+      <td>Non</td>
+      <td>Mais</td>
+      <td>Allo !</td>
+    </tr>
+    <tr>
+      <td>Non</td>
+      <td>Mais</td>
+      <td>Allo !</td>
+    </tr>
+       <tr>
+      <td>Non</td>
+      <td>Mais</td>
+      <td>Allo !</td>
+    </tr>
+    <tr>
+      <td>Non</td>
+      <td>Mais</td>
+      <td>Allo !</td>
+    </tr>
+    <tr>
+      <td>Non</td>
+      <td>Mais</td>
+      <td>Allo !</td>
+    </tr>
+    <tr>
+      <td>Non</td>
+      <td>Mais</td>
+      <td>Allo !</td>
+    </tr>
+    <tr>
+      <td>Non</td>
+      <td>Mais</td>
+      <td>Allo !</td>
+    </tr>
+    <tr>
+      <td>Non</td>
+      <td>Mais</td>
+      <td>Allo !</td>
+    </tr>
+    <tr>
+      <td>Non</td>
+      <td>Mais</td>
+      <td>Allo !</td>
+    </tr>
+    <tr>
+      <td>Non</td>
+      <td>Mais</td>
+      <td>Allo !</td>
+    </tr>
+    <tr>
+      <td>Non</td>
+      <td>Mais</td>
+      <td>Allo !</td>
+    </tr>
+    <tr>
+      <td>Non</td>
+      <td>Mais</td>
+      <td>Allo !</td>
+    </tr>
+    </div>
+  </tbody>
+</table>

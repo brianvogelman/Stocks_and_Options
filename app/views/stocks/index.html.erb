@@ -1,0 +1,19 @@
+<%= form_tag '/stocks' do %>
+	<div id="form_div">
+		<div class="inner_div">
+			<%= label_tag "Stock Symbol"%>
+			<%= text_field_tag :stock_symbol %>
+		</div>
+		<div class="inner_div">
+			<%= label_tag "Option Volume Greater Than" %>
+			<%= text_field_tag :lower_limit %>
+		</div>
+		<div class="inner_div">
+			<%= label_tag "Option Volume Less Than" %>
+			<%= text_field_tag :upper_limit %>
+		</div>
+	</div>
+	<div>  
+		<%= submit_tag "Search Options" %>
+	</div>
+<% end %>
