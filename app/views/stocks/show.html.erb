@@ -36,23 +36,23 @@
     <tr>
       <% if @stock_info %>
       <td><%= @stock_info['quotes']['quote']['symbol'] %></td>
-	  <td><%= @stock_info['quotes']['quote']['last'] %></td>
-	  <td><%= @stock_info['quotes']['quote']['bid'] %></td>
-	  <td><%= @stock_info['quotes']['quote']['ask'] %></td>
+	  <td><%= number_to_currency(@stock_info['quotes']['quote']['last']) %></td>
+	  <td><%= number_to_currency(@stock_info['quotes']['quote']['bid']) %></td>
+	  <td><%= number_to_currency(@stock_info['quotes']['quote']['ask']) %></td>
 	  <td><%= number_with_delimiter(@stock_info['quotes']['quote']['volume'].round(0)) %></td>
 	  <td></td>
-	  <td><%=  sprintf "%.2f", (@stock_info['quotes']['quote']['ask'] - @stock_info['quotes']['quote']['bid']) %></td>
+	  <td><%=  number_to_currency(sprintf "%.2f", (@stock_info['quotes']['quote']['ask'] - @stock_info['quotes']['quote']['bid'])) %></td>
 	  <% end %>
     </tr>
 
     <tr>
       <td><%= @option_info['quotes']['quote']['symbol'] %></td>
-      <td><%= @option_info['quotes']['quote']['last'] %></td>
-      <td><%= @option_info['quotes']['quote']['bid'] %></td>
-      <td><%= @option_info['quotes']['quote']['ask'] %></td>
+      <td><%= number_to_currency(@option_info['quotes']['quote']['last']) %></td>
+      <td><%= number_to_currency(@option_info['quotes']['quote']['bid']) %></td>
+      <td><%= number_to_currency(@option_info['quotes']['quote']['ask']) %></td>
       <td><%= number_with_delimiter(@option_info['quotes']['quote']['volume'].round(0)) %></td>
       <td><%= number_with_delimiter(@option_info['quotes']['quote']['open_interest'].round(0)) %></td>
-      <td><%=  sprintf "%.2f", (@option_info['quotes']['quote']['ask'] - @option_info['quotes']['quote']['bid']) %></td>
+      <td><%=  number_to_currency(sprintf "%.2f", (@option_info['quotes']['quote']['ask'] - @option_info['quotes']['quote']['bid'])) %></td>
     </tr>
     <tr>
       <td>Non</td>
