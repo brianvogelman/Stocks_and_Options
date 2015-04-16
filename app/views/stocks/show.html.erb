@@ -44,7 +44,7 @@
 	  <td><%=  number_to_currency(sprintf "%.2f", (@stock_info['quotes']['quote']['ask'] - @stock_info['quotes']['quote']['bid'])) %></td>
 	  <% end %>
     </tr>
-    <% @option_infos.each do |option_info| %>
+    <% @option_infos.each do |option_info| %>		
 	    <tr>
 	      <td><%= option_info['quotes']['quote']['symbol'] %></td>
 	      <td><%= number_to_currency(option_info['quotes']['quote']['last']) %></td>
